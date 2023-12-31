@@ -1,3 +1,263 @@
+.task {
+    
+    background: var(--gray-600);
+    border-radius: 8px;
+    padding: 2.5rem;
+    
+}
+
+header {
+width: 736px;
+height: 54px;
+display: fixed;
+//background-color: orange;
+margin: 0 auto;
+padding: 1rem;
+gap: 2rem;
+align-items: flex-start;
+
+background-color: var(--gray-700);
+
 h1 {
+    color: orange;
+    text-align: center;
+}
+
+}
+
+#insira_tarefa {
+    width: 736px;
+    height: 54px;
+    //display: fixed;
+    //background-color: orange;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 2rem;
+    align-items: flex-start;
+
+    background-color: var(--gray-700);
+
+    display: flex;
+
+    button {
+        background: orange;
+        
+        padding: 12px;
+        border-radius: 12px;
+        display: flex;
+    }
+
+    .input-wrapper input,
+    .input-wrapper button {
+    display: inline-block;
+    vertical-align: middle; 
+    margin-left: 2rem;
+    
+}
+        
+    }
+
+    input {
+
+        box-sizing: border-box;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 16px;
+        gap: 8px;
+        
+        width: 550px;
+        height: 54px;
+        
+        background: var(--gray-500);
+        
+        border: 1px solid var(--gray-700);
+        border-radius: 8px;
+        
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+        
+        }
+
+
+#tasks {
+    
+    width: 736px;
+    height: 54px;
+    margin-left: 17rem;
+    gap: 4rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+#buttons {
+    justify-content: space-between;
+}
+
+#trash :hover{
+        background: red;
+}
+
+a.btnUpdate {
+    text-decoration: none;
+    color: #ccc;
+    padding: 8px;
+}
+
+a.btnUpdate:hover {
+    color: blue;
+}
+
+a.btnDelete {
+    text-decoration: none;
+    color: #ccc;
+}
+
+a.btnDelete:hover {
     color: red;
 }
+
+section#modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+  }
+  
+  div#card {
+    width: 30rem;
+    position: relative;
+    background-color: #202024;
+  }
+  div#head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  
+  div#card h2 {
+    margin: 0;
+  }
+  
+  div#card a#close {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  div#card a#close:hover {
+    background-color: #ff0000;
+    border-radius: 5rem;
+    padding: 0 0.3rem;
+  }
+  
+  div#card hr {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  div#card p {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  div#btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  
+  div#btns a {
+    text-decoration: none;
+    padding: .5rem;
+    width: 7rem;
+    text-align: center;
+    background-color: #202024;
+    font-size: 1.5rem;
+  }
+  
+  div#btns a#btnNot {
+    color: #ff0000;
+    border: solid 1px #ff0000;
+    margin-right: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  div#btns a#btnNot:hover {
+    background-color: #ff0000;
+    color: #fff;
+  }
+  
+  div#btns a#btnYes {
+    color: #00aa2a;
+    border: solid 1px #00aa2a;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  div#btns a#btnYes:hover {
+    background-color: #00aa2a;
+    color: #fff;
+  }
+  
+  .message {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: auto;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .message-danger{
+    background-color: rgb(255,197, 197);
+    color: #8a0000;
+  }
+  
+  .message-success {
+    background-color: rgb(197, 255, 214);
+    color: #008a1e;
+  }
+  
+  span#close-message{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+    padding-left: 2rem;
+  }
+  
+  span#close-message:hover {
+    color: rgb(255, 0, 0);
+  }

@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <title>To Do List</title>
 </head>
 <body>
 
     <header>
+        <h1>TO DO LIST FULL STACK</h1>
+    </header>
+
+    <section id="insira_tarefa">
+        <div class="input-wrapper">
         <% if (task == null) { %>
         <form action="/create" method="post">
-            <input typ="text" name="task" id="task" placeholder="Insira uma tarefa">
+            <input type="text" name="task" id="task" placeholder="Insira uma tarefa">
             <button id="addButton" type="submit">Adicionar</button>
         </form>
+        </div>
         <% } else { %>
 
         <form action="/updateOne/<%=  task._id %>" method="post">
@@ -21,31 +29,24 @@
             <button id="addButton" type="submit">Atualizar</button>
         </form>
         <% } %>
-    </header>
+    </section>
 
     <section id="tasks">
         <ul>
             <% tasksList.forEach((task) => { %>
                 <li>
                     <%= task.task %> | <%= task.date.toLocaleDateString('pt-br') %>
-                    <a href="/getById/<%= task._id %>/update">editar</a>
-                    <a href="/getById/<%= task._id %>/delete">Apagar</a>
+                    <div id="buttons">
+                        <a class="btnUpdate" href="/getById/<%= task._id %>/update"><i class="bi bi-pencil"></i></a>
+                        <a class="btnDelete" href="/getById/<%= task._id %>/delete"><i class="bi bi-trash" id="trash"></i></a>
+                    </div>
                 </li>
             <% }) %>
         </ul>
     </section>
 
-    <% if (taskDelete != null) { %>
-    <section id="modal">
-        <div id="card">
-            <a href="/">x</a>
-            <h2>Confirmação</h2>
-            <hr>
-            <p>Deseja realmente apagar a tarefa <%= taskDelete.task %> ?</p>
-            <a href="/">Não</a>
-            <a href="/deleteOne/<%= taskDelete._id %>">Sim</a>
-        </div>
-    </section>
+    <% if (taskDelete !=null) { %>
+        <%- include('./components/modalDel', {task: taskDelete})  %>
     <% } %>
     
     <script src="script.js"></script>
