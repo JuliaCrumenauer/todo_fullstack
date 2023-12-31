@@ -88,6 +88,7 @@ h1 {
     height: 54px;
     margin-left: 17rem;
     gap: 4rem;
+    
 }
 
 ul {
@@ -103,6 +104,12 @@ ul li {
     flex-wrap: wrap;
     font-size: 1.3rem;
     padding: 1rem;
+}
+
+ul li a span {
+    color: #ccc;
+    font-size: .8rem;
+    padding-left: 1rem;
 }
 
 #buttons {
@@ -126,7 +133,7 @@ a.btnUpdate:hover {
 a.btnDelete {
     text-decoration: none;
     color: #ccc;
-}
+}   
 
 a.btnDelete:hover {
     color: red;
