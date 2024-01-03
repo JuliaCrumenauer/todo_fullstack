@@ -30,7 +30,15 @@ header {
 
   display: flex;
 
-  button {
+  .input-wrapper input,
+  .input-wrapper button {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2rem;
+  }
+}
+
+#addButton {
     background: orange;
 
     cursor: pointer;
@@ -40,13 +48,10 @@ header {
     display: flex;
   }
 
-  .input-wrapper input,
-  .input-wrapper button {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 2rem;
+  #addButton:hover {
+    background: #F24F00;
+    transition-delay: 0.1s;
   }
-}
 
 input {
   box-sizing: border-box;
