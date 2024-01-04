@@ -9,7 +9,7 @@ setTimeout(() => {
   message.style.display = "none";
 }, 5000);
 
-document.querySelector('.checkButton').addEventListener('click', function() {
+/*document.querySelector('.checkButton').addEventListener('click', function() {
     const conteudo = document.querySelector('#textCheck');
     conteudo.classList.add('sublinhado');
-});
+});*/
