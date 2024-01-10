@@ -19,7 +19,12 @@
     </header>
 
     <section id="insira_tarefa">
-        <div class="input-wrapper">
+     <% if (task==null) { %>
+            <%- include('./components/form', {titleForm: "", action: "create", value: "", idBtn: "addButton", nameBtn: "Adicionar"})%>
+        <% } else { %>
+            <%- include('./components/form', {titleForm: "EDITAR TAREFA", action: `updateOne/${task._id}`, value: task.task, idBtn: "updateButton", nameBtn: "Atualizar"}) %>
+        <% } %>
+      <!--  <div class="input-wrapper">
         <% if (task == null) { %>
         <form action="/create" method="post">
             <input type="text" name="task" id="task" placeholder="Insira uma tarefa">
@@ -32,8 +37,8 @@
             <input typ="text" name="task" id="task" value="<%= task.task %>">
             <button id="addButton" type="submit">Atualizar</button>
         </form>
-        <% } %>
-    </section>
+        <% } %> -->
+    </section> 
 
     <section id="tasks">
         <ul>

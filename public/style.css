@@ -134,7 +134,7 @@ ul li.check-true {
 ul li a.check-true::before{
   content: "";
   position: absolute;
-  border: green solid;
+  border: yellow solid;
   top: 17px;
   left: 16px;
   height: 15px;
